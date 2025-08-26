@@ -79,7 +79,7 @@ python -c "from sentence_transformers import SentenceTransformer; SentenceTransf
 ---
 
 ### 6. Çalıştırma
-📂 `data/` klasörüne test PDF ekle (örn: `ALPCATALOG.pdf`, `ISILDARCATALOG.pdf`)  
+📂 `data/` klasörüne test PDF ekle (örn: `SEED.pdf`, `SEED2.pdf`)  
 
 ```bash
 python rag_bot.py
