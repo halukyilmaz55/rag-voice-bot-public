@@ -1,150 +1,128 @@
-RAG Voice Bot (Public Edition)
-
-Bu repo, sesli etkileşimli RAG Chatbot demosudur.
+🎙️ RAG Voice Bot (Public Edition)
+Sesli etkileşimli RAG Chatbot demosudur.
 Kendi sesinle soru sorabilir, dokümanlardan yanıt alabilir ve cevapları sesli olarak dinleyebilirsin.
 
-Klasör Yapısı
-
+📂 Klasör Yapısı
 RAG-VOICE-BOT-PUBLIC/
-│
-├── data/ # Katalog ve diğer dokümanlar (PDF, DOCX, CSV vs.)
-├── voice/ # Ses dosyaları (input.wav, answer.mp3)
-│
-├── rag_bot.py # Ana bot kodu
-├── ocr-rag.py # OCR test/yardımcı script
-├── requirements.txt # Python bağımlılıkları
-├── audit.log # Her sorgu için audit kayıtları
-├── out.txt # Çıktı/test dosyası
-├── BACKLOG.txt # Geliştirme notları (opsiyonel)
-└── README.md # Kurulum & kullanım dökümanı
+├── data/ -> Dokümanlar (PDF, DOCX, CSV vs.)
+├── voice/ -> Ses dosyaları (input.wav, answer.mp3)
+├── rag_bot.py -> Ana bot kodu
+├── ocr-rag.py -> OCR test/yardımcı script
+├── requirements.txt -> Python bağımlılıkları
+├── audit.log -> Her sorgu için audit kayıtları
+├── out.txt -> Çıktı/test dosyası
+├── BACKLOG.txt -> Geliştirme notları (opsiyonel)
+└── README.md -> Kurulum & kullanım dökümanı
 
-Desteklenen Dosya Tipleri
+📑 Desteklenen Dosya Tipleri
 
-PDF (PyPDF + OCR fallback)
+📄 PDF (PyPDF + OCR fallback)
 
-DOCX (python-docx)
+📘 DOCX (python-docx)
 
-XLSX/XLS (openpyxl)
+📊 XLSX/XLS (openpyxl)
 
-CSV (pandas)
+📑 CSV (pandas)
 
-TXT (satır bazlı)
+📄 TXT (satır bazlı)
 
-Markdown (satır bazlı)
+📝 Markdown (satır bazlı)
 
-JSON (flatten edilmiş)
+🔧 JSON (flatten edilmiş)
 
-Kurulum Öncesi
+🚀 Kurulum
 
 API Key’leri Tanımla
 export OPENAI_KEY="senin-openai-key"
 export ELEVENLABS_KEY="senin-elevenlabs-key"
 export VOICE_ID="senin-elevenlabs-voice-id"
 
-İstersen bunları ~/.zshrc içine ekleyebilirsin.
+👉 İpucu: bunları ~/.zshrc içine eklersen kalıcı olur.
 
-Klasör Oluştur
-mkdir rag-voice-bot
-cd rag-voice-bot
-
-Sanal Ortam (Önerilir)
+Sanal Ortam (önerilir)
 python3 -m venv venv
 source venv/bin/activate
 
-Gerekli Paketler (macOS için)
+Sistem Bağımlılıkları (macOS)
 brew install poppler
 brew install tesseract
 brew install tesseract-lang
 
-Python paketleri:
+Python Paketleri
 pip install openai chromadb pypdf sentence-transformers sounddevice numpy requests
 pip install pytesseract pillow pdf2image python-docx pandas
 
 Hugging Face Modelini İndir
 python -c "from sentence_transformers import SentenceTransformer; SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2')"
 
-İlk çalıştırmada cache’e kaydolur (~/.cache/huggingface/).
-Sonraki çalıştırmalar çok daha hızlı olur.
+➡️ İlk çalıştırmada cache’e kaydolur (~/.cache/huggingface/).
+➡️ Sonraki çalıştırmalarda çok daha hızlı olur.
 
-Çalışma Klasör Yapısı
-rag-voice-bot/
-├── data/ (dokümanlar)
-├── voice/ (input.wav + answer.mp3)
-├── rag_bot.py
-└── audit.log
+▶️ Çalıştırma
 
-Kod Dosyası
-nano rag_bot.py
-
-kod burada olacak
-
-Test için PDF koy
-data/SEED.pdf
+data/ klasörüne test PDF ekle
+örnek:
+data/ALPCATALOG.pdf
 data/ISILDARCATALOG.pdf
 
-Çalıştır
+Botu başlat
 python rag_bot.py
 
 Akış:
+🎙️ Mikrofon → konuş → sessizlikle otomatik durur.
+📝 Whisper STT → konuşmayı metne çevirir.
+📚 ChromaDB → dokümanlardan bağlam çeker.
+🤖 GPT → yanıt üretir.
+🔊 ElevenLabs → yanıtı sese çevirir → voice/answer.mp3
 
-Mikrofon dinler, konuşursun, sessizlikte otomatik durur.
-
-Whisper STT konuşmanı metne çevirir.
-
-ChromaDB ilgili dokümanlardan bağlam getirir.
-
-GPT yanıt üretir.
-
-ElevenLabs yanıtı sese çevirir → voice/answer.mp3
-
-Dinlemek için:
+👉 Dinlemek için:
 open voice/answer.mp3
 
-Versiyonda Neler Var
+🔥 Özellikler
 
-Çoklu PDF desteği
+📚 Çoklu PDF desteği
 
-OCR fallback (taranmış PDF’lerden text çıkarma)
+🔍 OCR fallback (taranmış PDF’lerden text çıkarma)
 
-Satır bazlı chunking (daha hassas arama)
+✂️ Satır bazlı chunking (daha hassas arama)
 
-Multi-format dosya desteği (PDF, DOCX, XLSX, CSV, TXT, MD, JSON)
+🗂️ Multi-format desteği (PDF, DOCX, XLSX, CSV, TXT, MD, JSON)
 
-Fiyat filtresi (sorguda fiyat, TL, USD, EUR geçerse sadece fiyat chunk’ları)
+💰 Fiyat filtresi (sorguda fiyat, TL, USD, EUR geçerse sadece fiyat chunk’ları)
 
-Daha hızlı embedding modeli: sentence-transformers/all-MiniLM-L6-v2
+⚡ Hızlı embedding modeli: all-MiniLM-L6-v2
 
-Sessizlikle otomatik ses kaydı bitirme
+🎙️ Sessizlikle otomatik ses kaydı bitirme
 
-Audit log (her sorgunun kaynak + yanıt kaydı)
+📜 Audit log (kaynak ve yanıt kaydı)
 
-data/ klasöründen doküman besleme
+📂 data/ klasöründen doküman besleme
 
-voice/ klasörüne input/output dosyalarını yazma
+🎧 voice/ klasörüne input/output ses dosyası yazma
 
-GPT yanıtlarını günlük konuşma tarzında sunma (tablo yerine özetleme opsiyonu)
+🗣️ GPT yanıtlarını günlük konuşma tarzında özetleyerek sunma
 
-Örnek Sorular
-Genel Katalog Soruları:
+🔎 Örnek Sorular
 
-Hangi katalogda daha fazla ürün var?
+Genel Katalog:
+
+"Hangi katalogda daha fazla ürün var?"
 
 Fiyat Sorguları:
 
-1000 TL üzerindeki ürünleri listele.
+"1000 TL üzerindeki ürünleri listele."
 
-Ek Notlar
 
-audit.log her sorguyu, kullanılan chunk’ları ve yanıtı kaydeder.
+📌 Ek Notlar
 
-Tablolar seslendirilirken bozuluyorsa GPT prompt’u “cevapları günlük dille özetle” şeklinde ayarlanabilir.
+audit.log her sorguyu ve kaynakları kaydeder.
+
+Tablo seslendirmeleri bozuk çıkarsa prompt → "cevapları günlük dille özetle".
 
 OCR fallback sadece text olmayan PDF sayfalarında devreye girer.
 
-İlk embedding modeli indirirken yavaş olabilir (~150 MB). Sonraki çalıştırmalarda hızlıdır.
+İlk embedding modeli indirme biraz yavaş olabilir (~150 MB). Sonraki çalıştırmalar hızlıdır.
 
 Ekstra: DOCX → PDF Çevirme
 pip install docx2pdf
 python -c "from docx2pdf import convert; convert('SEED.docx', 'SEED.pdf')"
-
-Artık sesli sorular sorabilir, dokümanlardan yanıt alıp dinleyebilirsin.
