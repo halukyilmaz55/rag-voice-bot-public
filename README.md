@@ -4,9 +4,9 @@ Bu repo, \*\*sesli etkileşimli RAG Chatbot\*\* demosudur. Kendi sesinle
 soru sorabilir, dokümanlardan yanıt alabilir ve cevapları \*\*sesli
 olarak dinleyebilirsin\*\*.
 
-\-\--
+\-\-
 
-\## 📂 Klasör Yapısı
+\# 📂 Klasör Yapısı
 
 RAG-VOICE-BOT-PUBLIC/ │ ├── data/ \# Katalog ve diğer dokümanlar (PDF,
 DOCX, CSV vs.) ├── voice/ \# Ses dosyaları (input.wav, answer.mp3) │ ├──
@@ -16,18 +16,18 @@ için audit kayıtları ├── out.txt \# Çıktı/test dosyası ├── BA
 \# Geliştirme notları (opsiyonel) └── README.md \# Kurulum & kullanım
 dökümanı (Markdown)
 
-\-\--
+\-\-
 
-\## 📑 Desteklenen Dosya Tipleri - 📄 \*\*PDF\*\* (PyPDF + OCR fallback)
+\# 📑 Desteklenen Dosya Tipleri - 📄 \*\*PDF\*\* (PyPDF + OCR fallback)
  - 📘 \*\*DOCX\*\* (python-docx)  - 📊 \*\*XLSX/XLS\*\* (openpyxl)  - 📑
 \*\*CSV\*\* (pandas)  - 📄 \*\*TXT\*\* (satır bazlı)  - 📝
 \*\*Markdown\*\* (satır bazlı)  - 🔧 \*\*JSON\*\* (flatten edilmiş)
 
-\-\--
+\-\-
 
-\## 🚀 Kurulum Öncesi
+\# 🚀 Kurulum Öncesi
 
-\### 1. API Key'leri Tanımla \`\`\`bash export
+\# 1. API Key'leri Tanımla \`\`\`bash export
 OPENAI_KEY=\"senin-openai-key\" export
 ELEVENLABS_KEY=\"senin-elevenlabs-key\" export
 VOICE_ID=\"senin-elevenlabs-voice-id\"
