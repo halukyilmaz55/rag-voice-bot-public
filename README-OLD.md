@@ -47,16 +47,17 @@ export VOICE_ID="senin-elevenlabs-voice-id"
 
 
 
-2. Klasör Oluştur
 
+2. Klasör Oluştur
 mkdir rag-voice-bot
 cd rag-voice-bot
 
 
-3. Sanal Ortam (Önerilir)
 
+3. Sanal Ortam (Önerilir)
 python3 -m venv venv
 source venv/bin/activate
+
 
 
 4. Gerekli Paketler
@@ -67,19 +68,18 @@ brew install tesseract
 brew install tesseract-lang
 Python paketleri:
 
-
 pip install openai chromadb pypdf sentence-transformers sounddevice numpy requests
 pip install pytesseract pillow pdf2image python-docx pandas
 
 
-5. Hugging Face Modelini İndir
 
+5. Hugging Face Modelini İndir
 python -c "from sentence_transformers import SentenceTransformer; SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2')"
 ➡️ İlk çalıştırmada cache’e kaydolur (~/.cache/huggingface/).
 ➡️ Sonraki çalıştırmalar çok daha hızlı olur.
 
-6. Çalışma Klasör Yapısı
 
+6. Çalışma Klasör Yapısı
 rag-voice-bot/
  ├── data/    📂 Dokümanlar (PDF, DOCX, CSV vs.)
  ├── voice/   🎙️ input.wav (soru) + answer.mp3 (yanıt)
@@ -88,34 +88,27 @@ rag-voice-bot/
 
 
 7. Kod Dosyası
-
 nano rag_bot.py
 # kod burada
 
 
 8. Test için PDF koy
-
 data/SEED.pdf
 data/ISILDARCATALOG.pdf
 
 
 9. Çalıştır
-
 python rag_bot.py
+
+
 Akış:
-
 Mikrofon dinler → konuş → sessizlikle otomatik durur.
-
 Whisper STT → konuşmanı metne çevirir.
-
 ChromaDB → ilgili dokümanlardan bağlam getirir.
-
 GPT → yanıt üretir.
-
 ElevenLabs → yanıtı sese çevirir → voice/answer.mp3.
 
 👉 Dinlemek için:
-
 open voice/answer.mp3
 
 
@@ -145,11 +138,8 @@ Fiyat Sorguları
 
 🔧 Ek Notlar
 audit.log → her sorguyu, kullanılan chunk’ları ve yanıtı kaydeder.
-
 Tablolar seslendirilirken bozuluyorsa → GPT prompt’u “cevapları günlük dille özetle” şeklinde ayarlanabilir.
-
 OCR fallback sadece text olmayan PDF sayfalarında devreye girer.
-
 İlk embedding modeli indirirken yavaş olabilir (~150 MB). Sonraki çalıştırmalarda hızlıdır.
 
 📌 Ekstra: DOCX → PDF Çevirme
