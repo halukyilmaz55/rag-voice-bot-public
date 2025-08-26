@@ -15,19 +15,12 @@ RAG-VOICE-BOT-PUBLIC/
 └── README.md -> Kurulum & kullanım dökümanı
 
 📑 Desteklenen Dosya Tipleri
-
 📄 PDF (PyPDF + OCR fallback)
-
 📘 DOCX (python-docx)
-
 📊 XLSX/XLS (openpyxl)
-
 📑 CSV (pandas)
-
 📄 TXT (satır bazlı)
-
 📝 Markdown (satır bazlı)
-
 🔧 JSON (flatten edilmiş)
 
 🚀 Kurulum
@@ -81,48 +74,37 @@ open voice/answer.mp3
 🔥 Özellikler
 
 📚 Çoklu PDF desteği
-
 🔍 OCR fallback (taranmış PDF’lerden text çıkarma)
-
 ✂️ Satır bazlı chunking (daha hassas arama)
-
 🗂️ Multi-format desteği (PDF, DOCX, XLSX, CSV, TXT, MD, JSON)
-
 💰 Fiyat filtresi (sorguda fiyat, TL, USD, EUR geçerse sadece fiyat chunk’ları)
-
 ⚡ Hızlı embedding modeli: all-MiniLM-L6-v2
-
 🎙️ Sessizlikle otomatik ses kaydı bitirme
-
 📜 Audit log (kaynak ve yanıt kaydı)
-
 📂 data/ klasöründen doküman besleme
-
 🎧 voice/ klasörüne input/output ses dosyası yazma
-
 🗣️ GPT yanıtlarını günlük konuşma tarzında özetleyerek sunma
+
 
 🔎 Örnek Sorular
 
 Genel Katalog:
-
 "Hangi katalogda daha fazla ürün var?"
 
 Fiyat Sorguları:
-
 "1000 TL üzerindeki ürünleri listele."
 
 
 📌 Ek Notlar
 
 audit.log her sorguyu ve kaynakları kaydeder.
-
 Tablo seslendirmeleri bozuk çıkarsa prompt → "cevapları günlük dille özetle".
-
 OCR fallback sadece text olmayan PDF sayfalarında devreye girer.
-
 İlk embedding modeli indirme biraz yavaş olabilir (~150 MB). Sonraki çalıştırmalar hızlıdır.
 
+
+
 Ekstra: DOCX → PDF Çevirme
+
 pip install docx2pdf
 python -c "from docx2pdf import convert; convert('SEED.docx', 'SEED.pdf')"
