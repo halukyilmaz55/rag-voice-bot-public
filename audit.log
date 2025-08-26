@@ -4,16 +4,16 @@
 🔎 Arama parametresi: fiyat filtresi aktif
 📊 Chunk sayısı: 10
 📂 Kaynaklar:
- - KENDALCATALOG.pdf s.33
- - KENDALCATALOG.pdf s.33
- - KENDALCATALOG.pdf s.33
- - KENDALCATALOG.pdf s.34
- - KENDALCATALOG.pdf s.34
- - KENDALCATALOG.pdf s.34
- - KENDALCATALOG.pdf s.39
- - KENDALCATALOG.pdf s.39
- - KENDALCATALOG.pdf s.31
- - KENDALCATALOG.pdf s.33
+ - SEED.pdf s.33
+ - SEED.pdf s.33
+ - SEED.pdf s.33
+ - SEED.pdf s.34
+ - SEED.pdf s.34
+ - SEED.pdf s.34
+ - SEED.pdf s.39
+ - SEED.pdf s.39
+ - SEED.pdf s.31
+ - SEED.pdf s.33
 🤖 Yanıt: Aşağıda slim LED panel fiyatları yer almakta:
 
 | Ürün Tipi        | Fiyat (TL)        | Not                      |
@@ -23,7 +23,7 @@
 | 36W Slim LED Panel| 180               | Oval model               |
 | 48W Slim LED Panel| 210               | Kare model               |
 
-Fiyatlar dökümandan derlenmiştir. Kaynak: KENDALCATALOG.pdf
+Fiyatlar dökümandan derlenmiştir. Kaynak: SEED.pdf
 =================
 
 === Yeni Sorgu ===
@@ -31,16 +31,16 @@ Fiyatlar dökümandan derlenmiştir. Kaynak: KENDALCATALOG.pdf
 🔎 Arama parametresi: fiyat filtresi aktif
 📊 Chunk sayısı: 10
 📂 Kaynaklar:
- - KENDALCATALOG.pdf s.33
- - KENDALCATALOG.pdf s.33
- - KENDALCATALOG.pdf s.33
- - KENDALCATALOG.pdf s.33
- - KENDALCATALOG.pdf s.34
- - KENDALCATALOG.pdf s.34
- - KENDALCATALOG.pdf s.34
- - KENDALCATALOG.pdf s.34
- - KENDALCATALOG.pdf s.32
- - KENDALCATALOG.pdf s.32
+ - SEED.pdf s.33
+ - SEED.pdf s.33
+ - SEED.pdf s.33
+ - SEED.pdf s.33
+ - SEED.pdf s.34
+ - SEED.pdf s.34
+ - SEED.pdf s.34
+ - SEED.pdf s.34
+ - SEED.pdf s.32
+ - SEED.pdf s.32
 🤖 Yanıt: Aşağıda slim LED panellerin fiyatlarına dair karşılaştırmalı bir tablo bulunmaktadır. Ancak belirtmekte fayda var, belirli fiyatlar ve ürünler içeren bir veri setine erişim omadığımızdan, örnek fiyatlar üzerinden genel bir teşhis yapılmıştır.
 
 | Ürün Tipi                   | Özellikler                     | Fiyat Aralığı (TL) |
@@ -52,7 +52,7 @@ Fiyatlar dökümandan derlenmiştir. Kaynak: KENDALCATALOG.pdf
 
 Not: Fiyat aralıkları satıcılara ve bölgelere göre değişebilir.
 
-Kaynak: [KENDALCATALOG.pdf]
+Kaynak: [SEED.pdf]
 =================
 
 === Yeni Sorgu ===
@@ -60,17 +60,17 @@ Kaynak: [KENDALCATALOG.pdf]
 🔎 Arama parametresi: fiyat filtresi aktif
 📊 Chunk sayısı: 10
 📂 Kaynaklar:
- - KENDALCATALOG.pdf s.33
- - KENDALCATALOG.pdf s.32
- - KENDALCATALOG.pdf s.34
+ - SEED.pdf s.33
+ - SEED.pdf s.32
+ - SEED.pdf s.34
  - ALPCATALOG.pdf s.40
  - ALPCATALOG.pdf s.40
  - ALPCATALOG.pdf s.39
- - KENDALCATALOG.pdf s.31
- - KENDALCATALOG.pdf s.32
- - KENDALCATALOG.pdf s.34
- - KENDALCATALOG.pdf s.34
+ - SEED.pdf s.31
+ - SEED.pdf s.32
+ - SEED.pdf s.34
+ - SEED.pdf s.34
 🤖 Yanıt: 12 Watt Slim LED panel fiyatları genellikle 150-200 TL civarında. Bu, giriş seviyesi bir ürün için oldukça uygun bir fiyat. Eğer daha yüksek watt değerlerine (örneğin 36W) bakarsak, fiyatlar 300-400 TL aralığına çıkabiliyor ki bu da en pahalı seçeneklerden biri. Dolayısıyla, 12W model daha ekonomik bir seçim olarak öne çıkıyor.
 
-Kaynak: [KENDALCATALOG.pdf s.33]
+Kaynak: [SEED.pdf s.33]
 =================
