@@ -124,3 +124,4 @@ OCR fallback sadece text olmayan PDF sayfalarında devreye girer.
 
 pip install docx2pdf python -c \"from docx2pdf import convert;
 convert(\'SEED.docx\', \'SEED.pdf\')\"
+
